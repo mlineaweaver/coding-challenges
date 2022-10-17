@@ -19,3 +19,15 @@ function highestScore(students) {
 }
 
 highestScore(students);
+
+
+
+
+str = "abcddbacaaa"
+
+// Which character occures the most in the provided string
+function mostCharOccurence(str) {
+  console.log("unimplemented");
+}
+
+mostCharOccurence(str);
