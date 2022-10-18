@@ -18,16 +18,50 @@ function highestScore(students) {
   console.log(person + " " + hs);
 }
 
-highestScore(students);
+//highestScore(students);
 
-
-
-
-str = "abcddbacaaa"
+str = "abcddgggggggggbacaaa";
 
 // Which character occures the most in the provided string
 function mostCharOccurence(str) {
-  console.log("unimplemented");
+  strArr = str.split("");
+  dic = {};
+
+  count = 0;
+  letter = "";
+
+  for (i = 0; i < strArr.length; i++) {
+    c = strArr[i];
+    if (c in dic) {
+      dic[c] += 1;
+    } else {
+      dic[c] = 1;
+    }
+
+    if (dic[c] > count) {
+      count = dic[c];
+      letter = c;
+    }
+  }
+
+  console.log("The most used char is: " + letter);
 }
 
 mostCharOccurence(str);
+
+str = "246";
+
+// Sum up all the numbers in the string
+function addUpTheString(str) {
+  strArr = str.split("");
+
+  runningTotal = 0;
+
+  for (i = 0; i < strArr.length; i++) {
+    number = parseInt(strArr[i]);
+    runningTotal = number + runningTotal;
+  }
+  console.log(runningTotal);
+}
+
+addUpTheString(str);
